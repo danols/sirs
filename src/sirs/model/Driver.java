@@ -29,4 +29,5 @@ public class Driver {
 	public String getCurp() { return curp; }
 	public String getDrivingLicense() { return drivingLicense; }
 	public List<Long> getPhoneNumbers() { return phoneNumbers; }
+	
 }

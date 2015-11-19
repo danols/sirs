@@ -16,12 +16,12 @@ public abstract class DataBaseModel {
 	private static String db_password = "";
 	private static String base = "jdbc:mysql://";
 	private static String driver = "com.mysql.jdbc.Driver";
-	
-	protected abstract List<Object> select();
+	/*
+	protected abstract <T> List<T> select();
 	protected abstract String insert(List<Object> input);
 	protected abstract String delete();
 	protected abstract String update();
-	
+	*/
 	static {
         try {
             Class.forName(driver);
@@ -39,7 +39,7 @@ public abstract class DataBaseModel {
         try {
             connection.close();
         } catch (SQLException ex) {
-            System.out.println("No se pudo cerrar la conexión");
+            
         }
     }
 	
