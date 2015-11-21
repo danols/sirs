@@ -7,10 +7,13 @@
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js" ></script>
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-		<title>Nuevo Conductor</title>
+		<title>Conductores</title>
 	</head>
 	<body>
 		<c:import url='/view/header.jsp'/>
-		
+		<c:forEach items="${drivers}" var="driver">
+			<c:out value="${driver}" />
+			<br>
+		</c:forEach>
 	</body>
 </html>

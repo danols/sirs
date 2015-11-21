@@ -8,12 +8,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
+import com.sun.rowset.CachedRowSetImpl;
+
 public abstract class DataBaseModel {
 	private static String db_host = "localhost";
 	private static String db_port = "3306";
-	private static String db_name = "";
-	private static String db_user = "";
-	private static String db_password = "";
+	private static String db_name = "sirs";
+	private static String db_user = "root";
+	private static String db_password = "15040102hh";
 	private static String base = "jdbc:mysql://";
 	private static String driver = "com.mysql.jdbc.Driver";
 	/*
@@ -22,6 +24,7 @@ public abstract class DataBaseModel {
 	protected abstract String delete();
 	protected abstract String update();
 	*/
+	
 	static {
         try {
             Class.forName(driver);
@@ -34,7 +37,7 @@ public abstract class DataBaseModel {
         return DriverManager.getConnection(base + db_host + ":" + db_port + "/" + db_name, db_user, db_password);
     }
 	
-	private void closeConnection(Connection connection) {
+	void closeConnection(Connection connection) {
         if(connection == null) return;
         try {
             connection.close();
@@ -43,9 +46,10 @@ public abstract class DataBaseModel {
         }
     }
 	
-	protected ResultSet getResultFromQuery(String query) {
+	protected CachedRowSetImpl getResultFromQuery(String query) throws SQLException {
 		Connection connection = null;
 		ResultSet resultSet = null;
+		CachedRowSetImpl result = new CachedRowSetImpl();;
 		try {
 			connection = getConnection();
             PreparedStatement statement = connection.prepareStatement(query);
@@ -53,8 +57,9 @@ public abstract class DataBaseModel {
 		} catch(SQLException ex) {
 			ex.printStackTrace();
 		} finally {
+			result.populate(resultSet);
             closeConnection(connection);
         }
-		return resultSet;
+		return result;
 	}
 }
