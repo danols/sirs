@@ -5,9 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.List;
-
 import com.sun.rowset.CachedRowSetImpl;
 
 public abstract class DataBaseModel {
@@ -18,12 +15,6 @@ public abstract class DataBaseModel {
 	private static String db_password = "15040102hh";
 	private static String base = "jdbc:mysql://";
 	private static String driver = "com.mysql.jdbc.Driver";
-	/*
-	protected abstract <T> List<T> select();
-	protected abstract String insert(List<Object> input);
-	protected abstract String delete();
-	protected abstract String update();
-	*/
 	
 	static {
         try {
@@ -49,7 +40,7 @@ public abstract class DataBaseModel {
 	protected CachedRowSetImpl getResultFromQuery(String query) throws SQLException {
 		Connection connection = null;
 		ResultSet resultSet = null;
-		CachedRowSetImpl result = new CachedRowSetImpl();;
+		CachedRowSetImpl result = new CachedRowSetImpl();
 		try {
 			connection = getConnection();
             PreparedStatement statement = connection.prepareStatement(query);

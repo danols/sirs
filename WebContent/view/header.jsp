@@ -1,26 +1,56 @@
-<header class="navbar-fixed">
-	<nav class="top-nav green">
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
-			<div class = "nav-wrapper">
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="#"><i class="material-icons left">location_on</i>Rutas de Recolección</a></li>
-					<li><a href="#"><i class="material-icons left">store</i>Generadores</a></li>
-					<li><a href="#"><i class="material-icons left">business</i>Infraestructura</a></li>
-					<li><a href="#"><i class="material-icons left">assignment</i>Planes de Manejo</a></li>
-					<li><a href="#"><i class="material-icons left">vpn_key</i>Vehículos</a></li>
-				</ul>
-				<!--  
-				<div class="right">
-					<form>
-						<div class="input-field">
-							<input type="search" id="search-field" class="field" required>
-							<label for="search-field"><i class="mdi-action-search"></i></label>
-							<i class="mdi-navigation-close close"></i>
-						</div>
-					</form>
-				</div>
-				-->
-			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	          		<img style="max-width:25px; margin-top: 0px;" src="icons/routes.png"> Rutas de Recolección</a>
+	          		<ul class="dropdown-menu">
+			            <li><a href="#">Tipos de Vehículo</a></li>
+			            <li><a href="#">Todos los Vehículos</a></li>
+			            <li><a href="#">Todos los Conductores</a></li>
+			        </ul>
+	          	</li>
+	          	<li>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	          		<img style="max-width:25px; margin-top: 0px;" src="icons/garbage.png"> Generadores de Residuos</a>
+	          		<ul class="dropdown-menu">
+			            <li><a href="#">Tipos de Vehículo</a></li>
+			            <li><a href="#">Todos los Vehículos</a></li>
+			            <li><a href="#">Todos los Conductores</a></li>
+			        </ul>
+	          	</li>
+	          	<li>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	          		<img style="max-width:25px; margin-top: 0px;" src="icons/building.png"> Infraestructura</a>
+	          		<ul class="dropdown-menu">
+			            <li><a href="#">Tipos de Vehículo</a></li>
+			            <li><a href="#">Todos los Vehículos</a></li>
+			            <li><a href="#">Todos los Conductores</a></li>
+			        </ul>
+	          	</li>
+	          	<li>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	          		<img style="max-width:25px; margin-top: 0px;" src="icons/plan.png"> Plandes de Manejo</a>
+	          		<ul class="dropdown-menu">
+			            <li><a href="#">Tipos de Vehículo</a></li>
+			            <li><a href="#">Todos los Vehículos</a></li>
+			            <li><a href="#">Todos los Conductores</a></li>
+			        </ul>
+	          	</li>
+	          	<li class="dropdown">
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	          		<img style="max-width:28px; margin-top: 0px;" src="icons/truck3.png"> Vehículos Recolectores</a>
+	          		<ul class="dropdown-menu">
+			            <li><a href="#">Tipos de Vehículo</a></li>
+			            <li><a href="#">Todos los Vehículos</a></li>
+			            <li><a href="/sirs/?action=consultDrivers">Todos los Conductores</a></li>
+			            <li><a href="#">Nuevo Conductor</a></li>
+			            <li><a href="#">Nuevo Vehículo</a></li>
+			            <li><a href="#">Nuevo Tipo de Vehículo</a></li>
+			        </ul>
+	          	</li>
+	        </ul>
 		</div>
 	</nav>
 </header>
