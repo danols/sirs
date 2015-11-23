@@ -24,6 +24,11 @@ public class MainController extends HttpServlet {
 	    			consultDrivers(request,response);
 	    			url = base + "consultDrivers.jsp";
 	    		break;
+	    		
+	    		case "consultTrucks":
+	    			consultTrucks(request,response);
+	    			url = base + "consultTrucks.jsp";
+	    		break;
 	    	}
 	    }
 	    RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher(url);
@@ -38,4 +43,15 @@ public class MainController extends HttpServlet {
 			System.out.println(e);
 		}
 	}
+	
+	private void consultTrucks(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			TruckDAO truck = new TruckDAO();
+			List<Truck> trucks = truck.getAllTrucks();
+			request.setAttribute("trucks", trucks);
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
 }

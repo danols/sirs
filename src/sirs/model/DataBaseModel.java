@@ -12,7 +12,7 @@ public abstract class DataBaseModel {
 	private static String db_port = "3306";
 	private static String db_name = "sirs";
 	private static String db_user = "root";
-	private static String db_password = "15040102hh";
+	private static String db_password = "";
 	private static String base = "jdbc:mysql://";
 	private static String driver = "com.mysql.jdbc.Driver";
 	

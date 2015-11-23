@@ -43,7 +43,7 @@
 	          		<img style="max-width:28px; margin-top: 0px;" src="icons/truck3.png"> Vehículos Recolectores</a>
 	          		<ul class="dropdown-menu">
 			            <li><a href="#">Tipos de Vehículo</a></li>
-			            <li><a href="#">Todos los Vehículos</a></li>
+			            <li><a href="/sirs/?action=consultTrucks">Todos los Vehículos</a></li>
 			            <li><a href="/sirs/?action=consultDrivers">Todos los Conductores</a></li>
 			            <li><a href="#">Nuevo Conductor</a></li>
 			            <li><a href="#">Nuevo Vehículo</a></li>
